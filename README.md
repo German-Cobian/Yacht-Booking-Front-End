@@ -17,19 +17,18 @@
 
 In this app all users (admin and regular) are allowed the following actions:
 
-- To Signup.
+- To signup.
 ![Yachts](/src/assets/project-images/Signup.png?raw=true "signup")
-- To Login.
+- To login.
 ![Yachts](/src/assets/project-images/Login.png?raw=true "login")
 - To see all yachts featured in the site.
 ![Yachts](/src/assets/project-images/Yachts-display.png?raw=true "yachts-display")
-- To then pick out a specific yacht and have more specifics on it displayed.
+- To then pick out a specific yacht and have it displayed in greater detail.
 ![Yachts](/src/assets/project-images/Single-yacht.png?raw=true "single-yacht") 
-- To Reserve a Yacht from a specific city
+- To Reserve a Yacht from a specific port, on a given date, and for a certain number of days.
 ![Yachts](/src/assets/project-images/Reserve-a-yacht.png?raw=true "reserve-a-yacht") 
-- To see all their reservations.
+- To see all their reservations and, if they choose to do so, cancel.
 ![Yachts](/src/assets/project-images/All-reservations.png?raw=true "all-reservations") 
-- To Cancel  reservations.
 
 Admins are allowed these additional actions:
 
