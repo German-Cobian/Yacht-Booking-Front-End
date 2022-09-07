@@ -15,15 +15,28 @@
 
 > This is  a Web application where users should sign in to rent a Yacht from a list then reserve it for a determined period, users can then see their reservations or cancel them.
 
-In this App users are allowed:
-- To Signup and Login.
+In this app all users (admin and regular) are allowed the following actions:
+
+- To Signup.
+![Yachts](/src/assets/project-images/Signup.png?raw=true "signup")
+- To Login.
+![Yachts](/src/assets/project-images/Login.png?raw=true "login")
+- To see all yachts featured in the site.
+![Yachts](/src/assets/project-images/Yachts-display.png?raw=true "yachts-display")
+- To then pick out a specific yacht and have more specifics on it displayed.
+![Yachts](/src/assets/project-images/Single-yacht.png?raw=true "single-yacht") 
 - To Reserve a Yacht from a specific city
-- To See all his reservations.
+![Yachts](/src/assets/project-images/Reserve-a-yacht.png?raw=true "reserve-a-yacht") 
+- To see all their reservations.
+![Yachts](/src/assets/project-images/All-reservations.png?raw=true "all-reservations") 
 - To Cancel  reservations.
 
-Admins are allowed:
-- To Login.
-- To Add a new Yacht, or delete a Yacht.
+Admins are allowed these additional actions:
+
+- To add a new yacht 
+![Yachts](/src/assets/project-images/Add-yacht.png?raw=true "add-yacht")
+- To delete a yacht.
+![Yachts](/src/assets/project-images/Delete-yacht.png?raw=true "delete-yacht") 
 <hr>
 
 
