@@ -3,7 +3,7 @@
   width: 20%;
   height: 100vh;
   border-right: 0.5px solid #efefef;
-  z-index: 10000;
+  z-index: 1001;
 }
 
 .nav {

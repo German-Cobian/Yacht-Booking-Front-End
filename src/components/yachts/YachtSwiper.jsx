@@ -11,9 +11,11 @@ const YachtCard = React.lazy(() => import('./YachtCard'));
 function YachtSwiper() {
   const [widthScreen, setWidthScreen] = useState(window.innerWidth);
   const { yachts } = useSelector((state) => state.yacht);
+
   window.addEventListener('resize', () => {
     setWidthScreen(window.innerWidth);
   });
+
   return (
     <Swiper
       slidesPerView={widthScreen > 799 ? 3 : 1}

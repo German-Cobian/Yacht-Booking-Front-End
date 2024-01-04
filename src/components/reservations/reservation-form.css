@@ -1,26 +1,18 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
 
-.main-2 {
+.background {
+  background-image:
+    linear-gradient(rgba(86, 236, 241, 0.865), rgba(96, 99, 135, 0.93)),
+    url("../../assets/yacht-background-r.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100vh;
-  position: relative;
 }
 
-.effect-2 {
-  background-image: url("../../assets/yacht-background-r.jpg");
-  background-repeat: round;
-  height: 100vh;
-  filter: blur(5px);
-}
-
-.showcase-2 {
+.showcase {
   height: 100vh;
   position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(72, 187, 181, 0.6);
   top: 0;
   right: 0;
   left: 0;
@@ -31,73 +23,28 @@
   letter-spacing: 15px;
 }
 
-label,
-.head-form {
-  color: #fff;
-}
-
-.box {
-  position: relative;
-}
-
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
   text-indent: 1px;
   text-overflow: '';
-  background: url("data:image/svg+xml,<svg height='10px' width='10px' viewBox='0 0 16 16' fill='%23000000' xmlns='http://www.w3.org/2000/svg'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>") no-repeat;
-  background-position: calc(100% - 0.75rem) center !important;
   appearance: none !important;
   padding-right: 2rem !important;
+  padding-left: 2rem !important;
 }
 
-input[type="date"],
-.box select {
-  background-color: #208efb;
-  color: white;
-  padding: 12px;
-  height: 50px;
-  border: none;
-  font-size: 20px;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
-  outline: none;
-}
-
-.box:hover::before {
-  color: rgba(255, 255, 255, 0.6);
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-.box select option {
-  padding: 30px;
-}
-
-.reserve,
-.my-reserve {
-  border-radius: 25px;
-  padding: 15px;
-  border: 0;
-}
-
-.my-reserve {
-  background-color: #208efb;
-  text-decoration: none;
-  color: #fff;
-}
-
-.reserve {
-  background-color: #fff;
-  color: #208efb;
-}
-
-.my-reserve:hover {
-  color: #000;
+.city-input {
+  margin-left: 25px;
+  margin-right: 25px;
 }
 
 @media only screen and (max-width: 1000px) {
-  input[type="date"],
-  .box select {
-    width: 300px;
-    margin-bottom: 10px;
+  .city-input {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  
+  select {
+    margin-top: 20px;
   }
 }

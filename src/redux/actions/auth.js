@@ -8,15 +8,15 @@ const setToken = (token) => {
 
 export const getToken = () => {
   const now = new Date(Date.now()).getTime();
-  const thirtyMinutes = 1000 * 60 * 30;
+  const ninetyMinutes = 1000 * 60 * 90;
   const timeSinceLastLogin = now - localStorage.getItem('lastLoginTime');
-  if (timeSinceLastLogin < thirtyMinutes) {
+  if (timeSinceLastLogin < ninetyMinutes) {
     return localStorage.getItem('token');
   }
   return false;
 };
 
-export const checkAuth = () => (dispatch) => fetch('https://wishyacht-api.herokuapp.com/current_user', {
+export const checkAuth = () => (dispatch) => fetch('http://localhost:3001/current_user', {
   headers: {
     Accept: 'application/json',
     'Content-Type': 'application/json',
@@ -29,7 +29,7 @@ export const checkAuth = () => (dispatch) => fetch('https://wishyacht-api.heroku
   return Promise.reject(dispatch({ type: NOT_AUTHENTICATED }));
 });
 
-export const signupUser = (credentials) => (dispatch) => fetch('https://wishyacht-api.herokuapp.com/signup', {
+export const signupUser = (credentials) => (dispatch) => fetch('http://localhost:3001/signup', {
   method: 'POST',
   headers: {
     Accept: 'application/json',
@@ -49,7 +49,7 @@ export const signupUser = (credentials) => (dispatch) => fetch('https://wishyach
   });
 });
 
-export const loginUser = (credentials) => (dispatch) => fetch('https://wishyacht-api.herokuapp.com/login', {
+export const loginUser = (credentials) => (dispatch) => fetch('http://localhost:3001/login', {
   method: 'POST',
   headers: {
     Accept: 'application/json',
@@ -69,7 +69,7 @@ export const loginUser = (credentials) => (dispatch) => fetch('https://wishyacht
   });
 });
 
-export const logoutUser = () => (dispatch) => fetch('https://wishyacht-api.herokuapp.com/logout', {
+export const logoutUser = () => (dispatch) => fetch('http://localhost:3001/logout', {
   method: 'DELETE',
   headers: {
     Accept: 'application/json',

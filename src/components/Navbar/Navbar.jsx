@@ -32,7 +32,7 @@ function Navbar({ currentUserRole }) {
     name: 'Delete yacht',
   }];
   const handleLogout = async () => {
-    const response = await fetch('https://wishyacht-api.herokuapp.com/logout', {
+    const response = await fetch('http://localhost:3001/logout', {
       method: 'delete',
       headers: {
         'Content-Type': 'application/json',

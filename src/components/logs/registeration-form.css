@@ -3,131 +3,17 @@ body {
   padding: 0;
 }
 
-.main {
+.background {
+  background-image:
+    linear-gradient(rgba(86, 236, 241, 0.865), rgba(96, 99, 135, 0.93)),
+    url("../../assets/yacht-background-r.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100vh;
-  position: relative;
-}
-
-.effect {
-  background-image: url("../../assets/yacht-background-r.jpg");
-  background-repeat: round;
-  height: 100vh;
-  filter: blur(5px);
-}
-
-h2 {
-  margin: 0;
-}
-
-.showcase {
-  height: 100vh;
-  position: absolute;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: rgb(0, 0, 0, 0.1);
-  top: 0;
-  right: 0;
-  left: 0;
-}
-
-.center {
-  position: relative;
-  background: #fff;
-  border-radius: 10px;
-  padding: 15px;
-  opacity: 0.85;
-}
-
-.center h1 {
-  font-size: 2em;
-  border-left: 5px solid dodgerblue;
-  padding: 10px;
-  color: #000;
-  letter-spacing: 2px;
-  margin-bottom: 60px;
-  font-weight: bold;
-  padding-left: 10px;
-  font-family: "Sansita Swashed", cursive;
-}
-
-.center .inputbox {
-  position: relative;
-  width: 300px;
-  height: 50px;
-  margin-bottom: 50px;
-}
-
-.center .inputbox input {
-  width: 90%;
-  border: 2px solid #000;
-  outline: none;
-  background: none;
-  padding: 10px;
-  border-radius: 10px;
-  font-size: 1.2em;
-}
-
-.center .inputbox:last-child {
-  margin-bottom: 0;
-}
-
-.center .inputbox span {
-  position: absolute;
-  top: 14px;
-  left: 20px;
-  font-size: 1em;
-  transition: 0.6s;
-  font-family: sans-serif;
-}
-
-.center .inputbox input:focus ~ span,
-.center .inputbox input:valid ~ span {
-  transform: translateX(-13px) translateY(-35px);
-  font-size: 1em;
-}
-
-.submit {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.center .submit [type='submit'] {
-  width: 40%;
-  background: dodgerblue;
-  color: #fff;
-  border: #fff;
-  cursor: pointer;
-  border-radius: 10px;
-  font-size: 1.2em;
-  padding: 10px;
-}
-
-.login {
-  width: 40%;
-  font-family: sans-serif;
-  background: #98c22a;
-  border: #fff;
-  color: #fff;
-  cursor: pointer;
-  border-radius: 10px;
-  font-size: 1.2em;
-  text-decoration: none;
-  padding: 10px;
-  text-align: center;
 }
 
 @media only screen and (max-width: 1000px) {
-  .showcase {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(0, 0, 0, 0.5);
-  }
-
+  
   .logo {
     display: none;
   }

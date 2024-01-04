@@ -2,7 +2,7 @@ import { GET_MY_RESERVATIONS } from '../../constants';
 import { getToken } from './auth';
 
 const getReservations = () => async (dispatch) => {
-  const response = await fetch('https://wishyacht-api.herokuapp.com/v1/reservations', {
+  const response = await fetch('http://localhost:3001/v1/reservations', {
     method: 'GET',
     headers: {
       Accept: 'application/json',
@@ -20,7 +20,7 @@ const getReservations = () => async (dispatch) => {
 };
 
 export const cancelReservation = (id) => async (dispatch) => {
-  const response = await fetch(`https://wishyacht-api.herokuapp.com/v1/reservations/${id}`, {
+  const response = await fetch(`http://localhost:3001/v1/reservations/${id}`, {
     method: 'DELETE',
     headers: {
       Accept: 'application/json',

@@ -8,6 +8,7 @@ const Yachtshow = () => {
   const params = useParams();
   const id = params.yacht_id;
   const [yacht, setYacht] = useState({});
+
   useEffect(() => {
     const request = axios.create({
       headers: {
@@ -15,10 +16,11 @@ const Yachtshow = () => {
         Authorization: localStorage.getItem('token'),
       },
     });
-    request.get(`https://wishyacht-api.herokuapp.com/v1/yachts/${id}`).then((response) => {
-      setYacht(response.data.attributes);
+    request.get(`http://localhost:3001/v1/yachts/${id}`).then((response) => {
+      setYacht(response.data);
     });
   }, []);
+
   return (
     <div className="yacht-card">
       <div className="img-wrap">

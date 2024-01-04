@@ -1,14 +1,21 @@
-import React, { useEffect } from 'react';
+/* eslint-disable react/no-array-index-key */
+/* eslint-disable react/jsx-key */
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { Pagination, Navigation } from 'swiper';
 import { Link } from 'react-router-dom';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import { ToastContainer } from 'react-toastify';
 import getReservations from '../../redux/actions/reservations';
 import SingleReservation from './SingleReservation';
-import 'react-toastify/dist/ReactToastify.css';
-import './reservations-display.css';
 
 const Reservations = () => {
   const dispatch = useDispatch();
+  const [widthScreen, setWidthScreen] = useState(window.innerWidth);
+
+  window.addEventListener('resize', () => {
+    setWidthScreen(window.innerWidth);
+  });
 
   useEffect(() => {
     dispatch(getReservations());
@@ -36,21 +43,36 @@ const Reservations = () => {
   }
 
   return (
-    <main className="main">
-      <div className="cards">
-        {reservations.map((reservation) => (
-          <SingleReservation
-            key={reservation.id}
-            id={reservation.id}
-            city={reservation.city}
-            startDate={reservation.start_date}
-            daysNumber={reservation.days_number}
-            cost={reservation.cost}
-            yachtId={reservation.yacht_id}
-          />
-        ))}
-      </div>
-      <ToastContainer />
+    <main className="">
+      <Swiper
+        slidesPerView={widthScreen > 799 ? 2 : 1}
+        spaceBetween={30}
+        slidesPerGroup={widthScreen > 799 ? 2 : 1}
+        loop
+        loopFillGroupWithBlank
+        pagination={{ clickable: true }}
+        navigation
+        modules={[Pagination, Navigation]}
+        className="swiper"
+      >
+        <div className="d-flex flex-row">
+          {reservations.map((reservation, id) => (
+            <SwiperSlide id={reservation.id}>
+              <SingleReservation
+                key={id}
+                id={reservation.id}
+                yachtId={reservation.yacht_id}
+                city={reservation.city}
+                startDate={reservation.start_date}
+                daysNumber={reservation.days_number}
+                cost={reservation.cost}
+              />
+              ;
+            </SwiperSlide>
+          ))}
+        </div>
+        <ToastContainer />
+      </Swiper>
     </main>
   );
 };

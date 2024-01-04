@@ -1,3 +1,7 @@
+* {
+  box-sizing: unset;
+}
+
 .w-80 {
   width: 80%;
   max-width: 700px;
@@ -23,12 +27,8 @@
   color: #000;
 }
 
-.addYacht__button,
-.deleteYacht__button {
-  color: #fff;
-  background-color: dodgerblue;
-  border-color: dodgerblue;
-  text-transform: uppercase;
+.addYacht__button {
+  color: white;
 }
 
 .AddYachts__header,
@@ -37,8 +37,7 @@
   margin-bottom: 50px;
 }
 
-.AddYachts__header > h1,
-.deleteYachts__header > h1 {
+.AddYachts__header > h1 {
   font-size: 2rem;
   font-weight: 800;
   color: #000;
@@ -46,8 +45,7 @@
   text-align: center;
 }
 
-.AddYachts__header > p,
-.deleteYachts__header > p {
+.AddYachts__header > p {
   font-size: 1rem;
   font-weight: 600;
   color: rgb(59 54 54 / 42%);
@@ -55,16 +53,11 @@
   margin-bottom: 1rem;
 }
 
-.AddYachts__header > hr,
-.deleteYachts__header > hr {
+.AddYachts__header > hr {
   border-top: 4px dotted rgb(59 54 54 / 60%);
   width: 80%;
   margin: 1rem auto;
   background: none;
-}
-
-.delete-yacht {
-  background: #218efa;
 }
 
 @media only screen and (max-width: 800px) {

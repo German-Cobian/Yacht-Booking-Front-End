@@ -50,7 +50,7 @@ Admins are allowed these additional actions:
 
 ## Api Documentation
 
->You can review the documentation for the API [here](https://wishyacht-api.herokuapp.com/api-docs/index.html
+>You can review the documentation for the API [here](http://localhost:3001/api-docs/index.html
 ).
 <hr>
 
@@ -80,6 +80,10 @@ Back-end
 - Rspec
 - Jest
 - Rswag
+
+## Video demo
+
+[VideoDemo](https://www.loom.com/share/b35908d47e0d4ff3a46de780c83aac89?sid=2d85e2b8-3fb4-4b56-a668-d90ed0cc6609)
 
 ## Live demo
 

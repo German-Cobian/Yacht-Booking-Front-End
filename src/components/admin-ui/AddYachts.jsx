@@ -74,7 +74,7 @@ function AddYachts() {
             <input type="file" id="image_url" name="image_url" placeholder="Select Image" required />
           </Form.Group>
           <Button variant="primary" type="submit" className="addYacht__button">
-            ADD YACHT
+            Add Yacht
           </Button>
         </Form>
         {/* <ToastContainer /> */}

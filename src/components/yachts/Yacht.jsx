@@ -7,9 +7,11 @@ import { fetchYachts } from '../../redux/actions/yachtActions';
 const YachtSwiper = React.lazy(() => import('./YachtSwiper'));
 const Yacht = () => {
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(fetchYachts());
   }, []);
+
   return (
     <main className={style.main}>
       <React.Suspense

@@ -53,43 +53,36 @@ const Login = ({ loggedIn }) => {
   }, [logInError]);
 
   return (
-    <div className="main">
-      <div className="effect" />
-      <div className="showcase">
-        <div className="logo">
-          <img src={logo} alt="logo" />
+    <div className="background d-flex flex-md-col justify-content-around">
+      <div className="logo"><img src={logo} alt="logo" /></div>
+      <div className="border border-dark rounded bg-light my-5">
+        <div className="my-5 mx-5">
+          <h1 className="">Log in</h1>
         </div>
-        <div className="center">
-          <div className="">
-            <h1 className="">Log in</h1>
+        <form className="form mx-5" onSubmit={handleSubmit(onFormSubmit)}>
+          <div className="mb-3">
+            <h6>Username</h6>
+            <input
+              type="text"
+              placeholder="Username"
+              {...register('username', { required: 'Username is required' })}
+            />
           </div>
-          <form className="form" onSubmit={handleSubmit(onFormSubmit)}>
-            <div className="inputbox">
-              <input
-                className=""
-                type="text"
-                placeholder="Username"
-                {...register('username', { required: 'Username is required' })}
-              />
-              <span>Username</span>
-            </div>
-            <div className="inputbox">
-              <input
-                className="score"
-                type="password"
-                placeholder="Password"
-                {...register('password', { required: 'Password is required' })}
-              />
-              <span>Password</span>
-            </div>
-            <div className="submit">
-              <input type="submit" value="Submit" onClick={() => updateErrors()} />
-              <Link className="login" to="/signup">
-                Sign up
-              </Link>
-            </div>
-          </form>
-        </div>
+          <div className="mb-4">
+            <h6>Password</h6>
+            <input
+              type="password"
+              placeholder="Password"
+              {...register('password', { required: 'Password is required' })}
+            />
+          </div>
+          <div className="d-flex flex-row justify-content-between">
+            <input className="btn btn-outline-primary py-0 me-3" type="submit" value="Submit" onClick={() => updateErrors()} />
+            <Link className="btn btn-outline-success py-0" to="/signup">
+              Sign up
+            </Link>
+          </div>
+        </form>
       </div>
       <ToastContainer />
     </div>
